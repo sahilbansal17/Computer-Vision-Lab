@@ -1,5 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx, float}
+\usepackage{subfig}
 
 \title{CSP780 Computer Vision: Assignment 2}
 \author{SAHIL - 2016UCS0008}
@@ -19,4 +21,24 @@ The given images have been interpolated using the \textbf{bilateral filter}. The
 
 \section{Results}
 
+	The original and interpolated image for '1.tif' are shown below. \\
+	The quality of the image is maintained and the edges are preserved as we have used a bilateral filter for interpolation. 
+	
+	\begin{figure}[H]
+		\centering
+		\subfloat[1.tif original]{{\includegraphics[width=2.5cm, height=2.5cm]{./1.png}}}
+		\qquad
+		\subfloat[1.tif interpolated]{{\includegraphics[width=5cm, height=5cm]{./1_interpolated.png} }}
+		\caption{Applying interpolation on 1.tif}
+	\end{figure}
+	
+	For measuring PSNR scores, the reference used is the CV2's inbuilt resize function which uses bilinear interpolation. 
+	 
+	\begin{figure}[H]
+		\centering
+		\vspace{0pt}
+		\includegraphics[width=400pt, height = 150pt, keepaspectratio]{./psnr_scores.png}
+		\caption{Table showing the PSNR scores}
+	\end{figure}
+	
 \end{document}
