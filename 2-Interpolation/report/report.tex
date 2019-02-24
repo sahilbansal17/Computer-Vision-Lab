@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{CSP780 Computer Vision: Assignment 2}
+\author{SAHIL - 2016UCS0008}
+\date{February 24, 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\large
+The given images have been interpolated using the \textbf{bilateral filter}. The following steps are followed in order to do so, independently for each of the colour channels in the image:
+\begin{itemize}
+    \item An image is interpolated by first copying the pixel values in alternate rows and columns of an image of double its size. The rest of the pixels are zero. 
+    \item The zero pixel values are then modified and calculated using the bilateral filter. Assuming it to be the mean of the neighbouring pixels, the bilateral filter is calculated and then convolved with the interpolated image to get the actual value at that location. 
+\end{itemize}
+
+\section{Results}
+
+\end{document}
